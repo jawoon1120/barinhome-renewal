@@ -1,0 +1,7 @@
+import { IGenericRepository } from '../../common/domain/IGenericRepository';
+import { User } from './User';
+import { UserId } from './UserId';
+
+export const UserRepositoryKey = 'UserRepository';
+
+export interface IUserRepository extends IGenericRepository<User, UserId> {}
