@@ -1,13 +1,14 @@
 import { Injectable, OnModuleInit } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { DataSource } from 'typeorm';
-
-export const MysqlDataSource = new DataSource({
-  type: 'mysql',
-});
+import { getDataSourceOptions } from './DataSourceOption';
 
 @Injectable()
 export class TypeOrmDatabase implements OnModuleInit {
+  constructor(private readonly configService: ConfigService) {}
+
   async onModuleInit() {
-    await MysqlDataSource.initialize();
+    const option = getDataSourceOptions(this.configService);
+    await new DataSource(option).initialize();
   }
 }
