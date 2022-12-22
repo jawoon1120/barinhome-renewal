@@ -35,12 +35,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/platform-express", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.2.1"],\
             ["@nestjs/schematics", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.0.3"],\
             ["@nestjs/testing", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.2.1"],\
+            ["@nestjs/typeorm", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.0.1"],\
             ["@types/express", "npm:4.17.14"],\
             ["@types/jest", "npm:28.1.8"],\
             ["@types/node", "npm:16.18.4"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:5.45.0"],\
             ["@typescript-eslint/parser", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:5.45.0"],\
+            ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-prettier", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:8.5.0"],\
             ["eslint-plugin-prettier", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:4.2.1"],\
@@ -1657,6 +1659,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@nestjs/typeorm", [\
+        ["npm:9.0.1", {\
+          "packageLocation": "./.yarn/cache/@nestjs-typeorm-npm-9.0.1-048c05d122-fbf8d28405.zip/node_modules/@nestjs/typeorm/",\
+          "packageDependencies": [\
+            ["@nestjs/typeorm", "npm:9.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-typeorm-virtual-734f0d4190/0/cache/@nestjs-typeorm-npm-9.0.1-048c05d122-fbf8d28405.zip/node_modules/@nestjs/typeorm/",\
+          "packageDependencies": [\
+            ["@nestjs/typeorm", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.0.1"],\
+            ["@nestjs/common", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.2.1"],\
+            ["@nestjs/core", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.2.1"],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["@types/reflect-metadata", null],\
+            ["@types/rxjs", null],\
+            ["@types/typeorm", null],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["rxjs", "npm:7.5.7"],\
+            ["typeorm", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:0.3.11"],\
+            ["uuid", "npm:8.3.2"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core",\
+            "@types/reflect-metadata",\
+            "@types/rxjs",\
+            "@types/typeorm",\
+            "reflect-metadata",\
+            "rxjs",\
+            "typeorm"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@nodelib/fs.scandir", [\
         ["npm:2.1.5", {\
           "packageLocation": "./.yarn/cache/@nodelib-fs.scandir-npm-2.1.5-89c67370dd-a970d595bd.zip/node_modules/@nodelib/fs.scandir/",\
@@ -3072,12 +3113,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/platform-express", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.2.1"],\
             ["@nestjs/schematics", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.0.3"],\
             ["@nestjs/testing", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.2.1"],\
+            ["@nestjs/typeorm", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:9.0.1"],\
             ["@types/express", "npm:4.17.14"],\
             ["@types/jest", "npm:28.1.8"],\
             ["@types/node", "npm:16.18.4"],\
             ["@types/supertest", "npm:2.0.12"],\
             ["@typescript-eslint/eslint-plugin", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:5.45.0"],\
             ["@typescript-eslint/parser", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:5.45.0"],\
+            ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-prettier", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:8.5.0"],\
             ["eslint-plugin-prettier", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:4.2.1"],\
