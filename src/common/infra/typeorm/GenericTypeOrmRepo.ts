@@ -1,8 +1,5 @@
 import { FindOneOptions, Repository } from 'typeorm';
-import { Inject, Type } from '@nestjs/common';
-
-import { MysqlDataSource } from 'src/core/database/typeorm/TypeOrmDatabase';
-
+import { Type } from '@nestjs/common';
 import { AggregateRoot } from 'src/common/domain/AggregateRoot';
 import { Identity } from 'src/common/domain/Identity';
 import { IGenericRepository } from 'src/common/domain/IGenericRepository';
