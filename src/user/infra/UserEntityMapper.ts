@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { User } from '../domain/User';
 import { UserId } from '../domain/UserId';
 import { EntityMapper } from 'src/common/infra/EntityMapper';
-import { UserRootEntity } from './UserRootEntity';
+import { UserRootEntity } from './UserRoot.entity';
 
 @Injectable()
 export class UserEntityMapper extends EntityMapper<

@@ -4,7 +4,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { User } from '../domain/User';
 import { UserId } from '../domain/UserId';
 import { GenericTypeOrmRepo } from 'src/common/infra/typeorm/GenericTypeOrmRepo';
-import { UserRootEntity } from './UserRootEntity';
+import { UserRootEntity } from './UserRoot.entity';
 import { UserEntityMapper } from './UserEntityMapper';
 
 @Injectable()
