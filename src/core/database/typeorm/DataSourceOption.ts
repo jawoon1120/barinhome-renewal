@@ -17,7 +17,7 @@ export function getDataSourceOptions(
     migrations: [__dirname + '/../../../migrations/*{.ts,.js}'],
     synchronize: false,
     logging: ['error', 'schema'],
-    timezone: 'Asia/Seoul',
+    migrationsRun: true,
   };
 }
 
