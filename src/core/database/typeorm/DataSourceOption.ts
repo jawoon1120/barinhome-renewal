@@ -13,11 +13,11 @@ export function getDataSourceOptions(
     database: configService.get('RDS_DB_NAME'),
     username: configService.get('RDS_USERNAME'),
     password: configService.get('RDS_PASSWORD'),
-    entities: [__dirname + '/../**/*.entity.{js,ts}'],
-    migrations: [__dirname + '/../migrations/*{.ts,.js}'],
+    entities: [__dirname + '/../../../**/*.entity.{js,ts}'],
+    migrations: [__dirname + '/../../../migrations/*{.ts,.js}'],
     synchronize: false,
     logging: ['error', 'schema'],
-    timezone: 'Asia/Seoul',
+    migrationsRun: true,
   };
 }
 

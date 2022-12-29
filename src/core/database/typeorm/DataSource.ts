@@ -7,9 +7,11 @@ import path = require('path');
 const datasourcePath = path.join(
   __dirname,
   '..',
+  '..',
+  '..',
   'configs',
   'env',
-  `.${process.env.NODE_ENV}.env`,
+  `${process.env.NODE_ENV}.env`,
 );
 config({ path: datasourcePath });
 

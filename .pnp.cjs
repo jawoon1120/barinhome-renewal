@@ -45,6 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:5.45.0"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
+            ["cross-env", "npm:7.0.3"],\
             ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-prettier", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:8.5.0"],\
@@ -3216,6 +3217,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/parser", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:5.45.0"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
+            ["cross-env", "npm:7.0.3"],\
             ["dotenv", "npm:16.0.3"],\
             ["eslint", "npm:8.28.0"],\
             ["eslint-config-prettier", "virtual:36e7ce6770489b9d0ba887d3c5b8096c0e61968f4f4f890f24b95423cfa482ac3f7d13cbb16d8f09a3f40294ee8de97633799b1df7cafcc0b49f405631aa8af2#npm:8.5.0"],\
@@ -3919,6 +3921,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/create-require-npm-1.1.1-839884ca2e-a9a1503d43.zip/node_modules/create-require/",\
           "packageDependencies": [\
             ["create-require", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["cross-env", [\
+        ["npm:7.0.3", {\
+          "packageLocation": "./.yarn/cache/cross-env-npm-7.0.3-96d81820f4-26f2f3ea2a.zip/node_modules/cross-env/",\
+          "packageDependencies": [\
+            ["cross-env", "npm:7.0.3"],\
+            ["cross-spawn", "npm:7.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
