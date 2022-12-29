@@ -19,7 +19,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "typeorm": "ts-node -P ./tsconfig.json $(yarn bin typeorm) -d ./dist/typeorm/datasource.js",
+    "typeorm": "ts-node -P ./tsconfig.json $(yarn bin typeorm) -d ./dist/core/database/typeorm/DataSource.js",
+    "migrate:create-dev": "cross-env NODE_ENV=development ts-node -P ./tsconfig.json $(yarn bin typeorm) migration:create",
     "migrate:generate-dev": "cross-env NODE_ENV=development yarn typeorm migration:generate ./src/migrations/$NAME",
     "migrate:revert-dev": "cross-env NODE_ENV=development yarn typeorm migration:revert",
     "migrate:run-dev": "cross-env NODE_ENV=development yarn typeorm migration:run"
@@ -31,6 +32,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/swagger": "^6.1.4",
     "@nestjs/typeorm": "^9.0.1",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.3",
     "joi": "^17.7.0",
     "mysql2": "^2.3.3",

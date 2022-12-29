@@ -1,6 +1,7 @@
-import { Column } from 'typeorm';
+import { Column, Entity } from 'typeorm';
 import { RootTypeOrmEntity } from 'src/common/infra/typeorm/RootTypeOrmEntity';
 
+@Entity('user')
 export class UserRootEntity extends RootTypeOrmEntity {
   @Column({ type: 'varchar', length: 64 })
   name: string;
