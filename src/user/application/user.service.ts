@@ -1,12 +1,15 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { IUserRepository } from '../domain/IUserRepository';
+import { InjectRepository } from '@nestjs/typeorm';
+import { IUserTypeOrmRepo } from '../domain/IUserRepository';
 import { User } from '../domain/User';
-import { UserRepository } from '../infra/UserRepository';
+import { UserRootEntityRepository } from '../infra/UserRepository';
+import { UserRootEntity } from '../infra/UserRoot.entity';
 
 @Injectable()
 export class UserService {
   constructor(
-    @Inject(UserRepository) private readonly userRepository: IUserRepository,
+    @Inject(UserRootEntityRepository)
+    private readonly userRepository: IUserTypeOrmRepo,
   ) {}
 
   async signUp(userId: string, passWord: string, name: string) {
@@ -16,8 +19,7 @@ export class UserService {
       userId: userId,
       passWord: passWord,
     });
-
-    await this.userRepository.save(user);
+    await this.userRepository.saveAG(user);
     return user;
   }
 }
