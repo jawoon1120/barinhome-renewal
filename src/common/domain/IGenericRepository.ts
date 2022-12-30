@@ -6,7 +6,7 @@ export interface IGenericRepository<
   TId extends Identity,
 > {
   nextId: () => TId;
-  findOne: (id: TId) => Promise<TAgg | null>;
-  save: (aggregate: TAgg) => Promise<void>;
-  remove: (aggregate: TAgg) => Promise<void>;
+  findOneAG: (id: TId) => Promise<TAgg | null>;
+  saveAG: (aggregate: TAgg) => Promise<void>;
+  removeAG: (aggregate: TAgg) => Promise<void>;
 }

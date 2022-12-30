@@ -16,7 +16,7 @@ export abstract class GenericTypeOrmRepo<
 
   abstract nextId(): TId;
 
-  async findOne(id: TId): Promise<TAgg | null> {
+  async findOneAG(id: TId): Promise<TAgg | null> {
     const { key } = id;
 
     const findOption: FindOneOptions = { where: { id: key } };
@@ -31,12 +31,12 @@ export abstract class GenericTypeOrmRepo<
     return this.mapper.toAggregate(entity);
   }
 
-  async save(aggregate: TAgg): Promise<void> {
+  async saveAG(aggregate: TAgg): Promise<void> {
     const dalEntity = this.mapper.toDalEntity(aggregate);
     await this.getTypeOrmRepository().save(dalEntity);
   }
 
-  async remove(aggregate: TAgg): Promise<void> {
+  async removeAG(aggregate: TAgg): Promise<void> {
     const dalEntity = this.mapper.toDalEntity(aggregate);
     await this.getTypeOrmRepository().remove(dalEntity);
   }
