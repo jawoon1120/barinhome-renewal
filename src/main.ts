@@ -5,7 +5,6 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -19,7 +18,6 @@ async function bootstrap() {
     .setTitle('BarInHome-Refactoring')
     .setDescription('The BarInHome API description using DDD')
     .setVersion('1.0')
-    // .addTag('cats')
     .addBearerAuth(
       {
         type: 'http',
@@ -32,6 +30,8 @@ async function bootstrap() {
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('swagger', app, document);
+
+  await app.listen(3000);
 }
 bootstrap();
