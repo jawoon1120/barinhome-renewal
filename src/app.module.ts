@@ -8,7 +8,8 @@ import { RecommendationModule } from './recommendation/recommendation.module';
 import { RefrigeratorModule } from './refrigerator/refrigerator.module';
 import path = require('path');
 import Joi = require('joi');
-import { CoreModule } from './core/core.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { typeOrmAsyncConfig } from './core/database/typeorm/TypeOrmModuleOption';
 
 const boundedContextModule = [
   CocktailModule,
@@ -26,7 +27,7 @@ const envPath = path.join(
 
 @Module({
   imports: [
-    CoreModule,
+    TypeOrmModule.forRootAsync(typeOrmAsyncConfig),
     ...boundedContextModule,
     ConfigModule.forRoot({
       isGlobal: true,

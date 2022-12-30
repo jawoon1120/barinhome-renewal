@@ -20,10 +20,3 @@ export function getDataSourceOptions(
     migrationsRun: true,
   };
 }
-
-// following function is for NestJS bootstrapping...
-export function getTypeOrmModuleOptionsFactory(
-  configService: ConfigService,
-): (...args: any[]) => Promise<TypeOrmModuleOptions> {
-  return async () => getDataSourceOptions(configService);
-}
