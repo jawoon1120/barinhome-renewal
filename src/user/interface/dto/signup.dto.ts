@@ -37,6 +37,11 @@ export class SignUpResDTO {
     this.result = result;
   }
 
+  static create(param: { userId: string; result: string }) {
+    const { userId, result } = param;
+    return new SignUpResDTO(userId, result);
+  }
+
   @ApiProperty({
     example: 'barinhome@gmail.com',
     description: '유저가 입력한 아이디',

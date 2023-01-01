@@ -22,7 +22,10 @@ export class UserController {
   ) {
     const { userId, passWord, name } = signUpData;
     const addedUser = await this.userService.signUp(userId, passWord, name);
-    const signUpResDTO = new SignUpResDTO(addedUser.getUserId(), '가입성공');
+    const signUpResDTO = SignUpResDTO.create({
+      userId: addedUser.getUserId(),
+      result: '가입성공',
+    });
     return response.status(HttpStatus.CREATED).send(signUpResDTO);
   }
 }
