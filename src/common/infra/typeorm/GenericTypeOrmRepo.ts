@@ -1,8 +1,6 @@
 import { DataSource, EntityTarget, FindOneOptions, Repository } from 'typeorm';
-// import { Type } from '@nestjs/common';
 import { AggregateRoot } from 'src/common/domain/AggregateRoot';
 import { Identity } from 'src/common/domain/Identity';
-// import { IGenericRepository } from 'src/common/domain/IGenericRepository';
 import { RootTypeOrmEntity } from './RootTypeOrmEntity';
 import { EntityMapper } from '../EntityMapper';
 import { IGenericTypeOrmRepo } from './IGenericTypeOrmRepo';
