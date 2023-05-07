@@ -7,6 +7,7 @@ export class User extends AggregateRoot<UserId> {
     private name: string,
     private userId: string,
     private passWord: string,
+    private signedInAt: Date | null,
     createdAt: Date,
     updatedAt: Date,
     deletedAt: Date | null,
@@ -15,6 +16,7 @@ export class User extends AggregateRoot<UserId> {
     this.name = name;
     this.userId = userId;
     this.passWord = passWord;
+    this.signedInAt = signedInAt;
   }
 
   static create(param: {
@@ -25,7 +27,22 @@ export class User extends AggregateRoot<UserId> {
   }) {
     const { id, name, userId, passWord } = param;
 
-    return new User(id, name, userId, passWord, new Date(), new Date(), null);
+    return new User(
+      id,
+      name,
+      userId,
+      passWord,
+      null,
+      new Date(),
+      new Date(),
+      null,
+    );
+  }
+
+  signIn(param: { passWord: string }) {
+    const { passWord } = param;
+    if (this.passWord !== passWord) throw new Error();
+    this.signedInAt = new Date();
   }
 
   updateName(name: string) {
@@ -46,5 +63,9 @@ export class User extends AggregateRoot<UserId> {
 
   getUserId(): string {
     return this.userId;
+  }
+
+  getSignedInAt(): Date {
+    return this.signedInAt;
   }
 }
