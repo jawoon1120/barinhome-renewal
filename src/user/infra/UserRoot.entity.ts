@@ -11,4 +11,7 @@ export class UserRootEntity extends RootTypeOrmEntity {
 
   @Column({ type: 'varchar', length: 512 })
   password: string;
+
+  @Column({ type: 'varchar', length: 512 })
+  signedInAt: Date;
 }

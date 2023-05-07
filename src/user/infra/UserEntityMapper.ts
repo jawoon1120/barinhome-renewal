@@ -11,14 +11,23 @@ export class UserEntityMapper extends EntityMapper<
   UserRootEntity
 > {
   toAggregate(dalEntity: UserRootEntity): User {
-    const { id, name, userId, password, createdAt, updatedAt, deletedAt } =
-      dalEntity;
+    const {
+      id,
+      name,
+      userId,
+      password,
+      signedInAt,
+      createdAt,
+      updatedAt,
+      deletedAt,
+    } = dalEntity;
 
     return new User(
       new UserId(id),
       name,
       userId,
       password,
+      signedInAt,
       createdAt,
       updatedAt,
       deletedAt,
